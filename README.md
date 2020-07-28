@@ -67,6 +67,11 @@ Coming soon...
 </details>
 
 <details>
+  <summary>Profile Page Diagram</summary>
+  <img src="images\ProfilePageDiagram.png" width = "600px">
+</details>
+
+<details>
 <summary>Entity Relationship Diagram</summary>
 <p> Coming soon...</p>
 </details>
