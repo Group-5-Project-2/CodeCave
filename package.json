@@ -1,0 +1,26 @@
+{
+  "name": "codecave",
+  "version": "1.0.0",
+  "description": "CodeCave Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Group-5-Project-2/CodeCave.git"
+  },
+  "author": "Daniel, Joshua, Diane, Conner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Group-5-Project-2/CodeCave/issues"
+  },
+  "homepage": "https://github.com/Group-5-Project-2/CodeCave#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "reactstrap": "^8.5.1",
+    "sequelize": "^6.3.3"
+  }
+}
