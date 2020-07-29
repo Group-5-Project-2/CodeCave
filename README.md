@@ -48,7 +48,7 @@ A social media application that facilitates a community of coding bootcamp gradu
 
 <details>
 <summary>Main Views</summary>
-Coming soon...
+<img src="client\public\images\LoginDrawIO.png" width = "600px">
 </details>
 
 <details>
@@ -63,12 +63,12 @@ Coming soon...
 
 <details>
   <summary>Flow Chart</summary>
-  <img src="images\codecave.png" width = "600px">
+  <img src="client\public\images\codecave.png" width = "600px">
 </details>
 
 <details>
   <summary>Profile Page Diagram</summary>
-  <img src="images\ProfilePageDiagram.png" width = "600px">
+  <img src="client\public\images\ProfilePageDiagram.png" width = "600px">
 </details>
 
 <details>
