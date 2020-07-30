@@ -1,7 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
     var Post = sequelize.define("Post", {
         postId: {
-            type: sequelize.INTEGER(11),
+            type: DataTypes.INTEGER(11),
             allowNull: false,
             autoIncrement: true,
             primaryKey: true,
