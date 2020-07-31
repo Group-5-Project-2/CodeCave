@@ -13,8 +13,16 @@ module.exports = function (sequelize, DataTypes) {
         message_text: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
+        }
+
 
     });
+    Message.associate = function (models) {
+
+        Message.hasOne(models.User, {
+            foreignKey: "userId",
+            allowNull: false,
+        })
+    }
     return Message;
 };
