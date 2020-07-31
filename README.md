@@ -73,7 +73,7 @@ Coming soon...
 
 <details>
 <summary>Entity Relationship Diagram</summary>
-<p> Coming soon...</p>
+<img src="client\public\images\code-cave-erd.png" width = "600px">
 </details>
 
 ---
