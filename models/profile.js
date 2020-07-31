@@ -1,7 +1,9 @@
+const user = require("./user");
+
 module.exports = function (sequelize, DataTypes) {
     var Profile = sequelize.define("Profile", {
         profileId: {
-            type: sequelize.INTEGER(11),
+            type: DataTypes.INTEGER(11),
             allowNull: false,
             autoIncrement: true,
             primaryKey: true,
@@ -34,9 +36,26 @@ module.exports = function (sequelize, DataTypes) {
         },
         state: {
             type: DataTypes.STRING,
-        }
+        },
+        userId: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
 
-    }
-    );
+
+    })
+    // Profile.hasOne(user, {
+    //     foreignKey: 'userId'
+    // });
+    // user.belongsTo(profile);
+    // );
+    Profile.associate = function (models) {
+        // 
+        // When an Author is deleted, also delete any associated Posts
+        Profile.hasOne(models.User, {
+            foreignKey: "userId",
+            allowNull: false,
+        })
+    };
     return Profile;
 };
