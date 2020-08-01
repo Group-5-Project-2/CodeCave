@@ -7,6 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import User from './components/User';
+
+import ProfilePage1 from './components/ProfilePage1';
+
 import FriendList from './components/FriendList'
 
 
@@ -20,6 +23,7 @@ function App () {
 					<Route exact path='/' component={Login} />
 					<Route exact path='/signup' component={Signup} />
 					<Route exact path='/user' component={User} />
+					<Route exact path='/profile1' component={ProfilePage1} />
 					<Route exact path='/friendlist' component={FriendList} />
 				</Switch>
 			</Router>
