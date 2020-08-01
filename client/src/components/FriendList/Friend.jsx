@@ -1,7 +1,9 @@
 import React from "react";
 
-function Contact(props) {
-	return <div>This is a contact</div>;
+function Friend(props) {
+	return <div>
+		<span>{props.name}</span>
+	</div>;
 }
 
-export default Contact;
+export default Friend;
