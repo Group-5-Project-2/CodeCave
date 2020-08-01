@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import User from './components/User';
+import ProfilePage1 from './components/ProfilePage1';
 
 function App () {
 	return (
@@ -17,6 +18,7 @@ function App () {
 					<Route exact path='/' component={Login} />
 					<Route exact path='/signup' component={Signup} />
 					<Route exact path='/user' component={User} />
+					<Route exact path='/profile1' component={ProfilePage1} />
 				</Switch>
 			</Router>
 			<Footer />
