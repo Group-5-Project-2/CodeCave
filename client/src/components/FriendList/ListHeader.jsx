@@ -1,8 +1,9 @@
 import React from "react"
+import "./style.css"
 
 function ListHeader(props) {
     return (
-        <div>Friend List Header</div>
+        <div className="list-header"><h2>Username's friends</h2></div>
     )
 }
 

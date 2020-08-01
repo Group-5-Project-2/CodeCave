@@ -3,13 +3,16 @@ import React from "react";
 import ListHeader from "./ListHeader"
 import ListGroup from "./ListGroup"
 import friends from "./friendTest.json"
+import SearchFriends from "./SearchFriends"
+import "./style.css"
 
 // create main functional component
 function FriendList() {
     return (
-        <div>
+        <div className="friend-list">
         <ListHeader />
         <ListGroup friends={friends}/>
+        <SearchFriends />
         </div>
     )
 }
