@@ -17,6 +17,7 @@ export default function () {
             <Nav.Link href="#link">Jobs</Nav.Link>
             <Nav.Link href="#home">Message</Nav.Link>
             <Nav.Link href="#link">Channels</Nav.Link>
+            <Nav.Link href="/friendlist">Friends</Nav.Link>
             <Nav.Link href="#link">Contact Support</Nav.Link>
             
           </Nav>
