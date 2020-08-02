@@ -16,6 +16,10 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        job_title: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         profile_picture: {
             type: DataTypes.BLOB,
         },
@@ -38,21 +42,14 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
         },
         userId: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER(11),
             allowNull: false,
         },
 
 
     })
-    // Profile.hasOne(user, {
-    //     foreignKey: 'userId'
-    // });
-    // user.belongsTo(profile);
-    // );
     Profile.associate = function (models) {
-        // 
-        // When an Author is deleted, also delete any associated Posts
-        Profile.hasOne(models.User, {
+        Profile.belongsTo(models.User, {
             foreignKey: "userId",
             allowNull: false,
         })
