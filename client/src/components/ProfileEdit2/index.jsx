@@ -67,7 +67,7 @@ const ProfileEdit2 = () => {
           <MDBRow>
             <MDBCol>
               <div style={{ marginTop: "10px" }}></div>
-              <label htmlFor="personBio" className="grey-text">
+              <label htmlFor="Job1Summary" className="grey-text">
                 Summary
               </label>
               <textarea
@@ -81,61 +81,61 @@ const ProfileEdit2 = () => {
           <MDBRow>
             <MDBCol sm="6">
               <div style={{ marginTop: "70px" }}></div>
-              <label htmlFor="Job1Company" className="grey-text">
+              <label htmlFor="Job2Company" className="grey-text">
                 Company Name
               </label>
-              <input type="text" id="Job1Company" className="form-control" />
+              <input type="text" id="Job2Company" className="form-control" />
             </MDBCol>
 
             <MDBCol sm="6">
               <div style={{ marginTop: "70px" }}></div>
-              <label htmlFor="Job1Title" className="grey-text">
+              <label htmlFor="Job2Title" className="grey-text">
                 Job Title
               </label>
-              <input type="text" id="Job1Title" className="form-control" />
+              <input type="text" id="Job2Title" className="form-control" />
             </MDBCol>
           </MDBRow>
 
           <MDBRow>
             <MDBCol sm="5">
               <div style={{ marginTop: "10px" }}></div>
-              <label htmlFor="Job1City" className="grey-text">
+              <label htmlFor="Job2City" className="grey-text">
                 City
               </label>
-              <input type="text" id="Job1City" className="form-control" />
+              <input type="text" id="Job2City" className="form-control" />
             </MDBCol>
 
             <MDBCol sm="5">
               <div style={{ marginTop: "10px" }}></div>
-              <label htmlFor="Job1State" className="grey-text">
+              <label htmlFor="Job2State" className="grey-text">
                 State
               </label>
-              <input type="text" id="Job1State" className="form-control" />
+              <input type="text" id="Job2State" className="form-control" />
             </MDBCol>
           </MDBRow>
 
           <MDBRow>
             <MDBCol sm="3">
               <div style={{ marginTop: "10px" }}></div>
-              <label htmlFor="Job1Start" className="grey-text">
+              <label htmlFor="Job2Start" className="grey-text">
                 Start Date
               </label>
-              <input type="text" id="Job1Start" className="form-control" />
+              <input type="text" id="Job2Start" className="form-control" />
             </MDBCol>
 
             <MDBCol sm="3">
               <div style={{ marginTop: "10px" }}></div>
-              <label htmlFor="Job1End" className="grey-text">
+              <label htmlFor="Job2End" className="grey-text">
                 End Date
               </label>
-              <input type="text" id="Job1End" className="form-control" />
+              <input type="text" id="Job2End" className="form-control" />
             </MDBCol>
           </MDBRow>
 
           <MDBRow>
             <MDBCol>
               <div style={{ marginTop: "10px" }}></div>
-              <label htmlFor="personBio" className="grey-text">
+              <label htmlFor="Job2Summary" className="grey-text">
                 Summary
               </label>
               <textarea

@@ -10,7 +10,7 @@ const ProfileEdit1 = () => {
   return (
     <MDBContainer>
       <MDBRow>
-        <div style={{ marginTop: "10px" }}></div>
+      <div style={{ marginTop: "10px", fontSize: "40px" }}>User Info</div>
       </MDBRow>
       <MDBRow>
         <MDBCol md="2"></MDBCol>
