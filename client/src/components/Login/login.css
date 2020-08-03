@@ -12,10 +12,12 @@
       background-color: green;
   }
   a {
-      color: rgb(240, 82, 82);
-      font: bold;
+      color: white;
+      text-decoration: underline;
+      text-decoration-color: white;
+      text-emphasis: bold;
       font-size: larger;
-      text-shadow: 1px 1px white;
+      font: bold;
       
 
   }
