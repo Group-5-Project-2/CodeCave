@@ -4,7 +4,7 @@ import "./style.css"
 
 function Friend(props) {
 	return <div className="friend">
-		<span>{props.name}</span><RemoveButton id={props.id}/>
+		<span>{props.name}</span> <RemoveButton />
 	</div>;
 }
 
