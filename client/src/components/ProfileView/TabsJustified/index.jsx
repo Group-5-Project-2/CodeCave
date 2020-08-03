@@ -17,6 +17,7 @@ toggleJustified = tab => e => {
 
 render() {
     return (
+      
       <MDBContainer>
         <MDBNav tabs className="nav-justified" color='indigo'>
           <MDBNavItem>
@@ -41,21 +42,25 @@ render() {
         >
           <MDBTabPane tabId="1" role="tabpanel">
             <p className="mt-2">
-              
+              Experience
+            </p>
+            <p>
+              Job Title
             </p>
           </MDBTabPane>
           <MDBTabPane tabId="2" role="tabpanel">
             <p className="mt-2">
-              
+              Education
             </p>
           </MDBTabPane>
           <MDBTabPane tabId="3" role="tabpanel">
             <p className="mt-2">
-              
+              Skills
             </p>
           </MDBTabPane>
         </MDBTabContent>
       </MDBContainer>
+      
     );
   }
 }

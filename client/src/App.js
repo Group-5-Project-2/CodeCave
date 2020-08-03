@@ -9,6 +9,7 @@ import Signup from './components/Signup';
 import User from './components/User';
 import ProfileView from './components/ProfileView';
 import ProfileEdit1 from './components/ProfileEdit1';
+import ProfileEdit2 from './components/ProfileEdit2';
 
 function App () {
 	return (
@@ -21,6 +22,7 @@ function App () {
 					<Route exact path='/user' component={User} />
 					<Route exact path='/profileview' component={ProfileView} />
 					<Route exact path='/profileedit1' component={ProfileEdit1} />
+					<Route exact path='/profileedit2' component={ProfileEdit2} />
 				</Switch>
 			</Router>
 			<Footer />
