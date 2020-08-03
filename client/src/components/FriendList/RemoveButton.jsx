@@ -1,9 +1,9 @@
 import React from "react"
 import Button from "react-bootstrap/Button"
 
-function RemoveButton() {
+function RemoveButton(props, { onRemoveFriend }) {
     return (
-        <Button variant="danger" size="sm">Remove</Button>
+        <Button onClick={() => props.test(props.id)} variant="danger" size="sm">Remove</Button>
     )
 }
 

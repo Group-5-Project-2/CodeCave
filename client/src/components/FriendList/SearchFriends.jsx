@@ -8,7 +8,7 @@ function SearchFriends() {
 	return (
 		<Form className="search-friends" inline>
 			<FormControl type="text" placeholder="Find Friends" className="mr-sm-2" />
-			<Button variant="outline-success">Search</Button>
+			<Button variant="outline-success" className="friendSearchButton">Search</Button>
 		</Form>
 	);
 }
