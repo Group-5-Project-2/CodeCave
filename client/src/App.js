@@ -13,8 +13,8 @@ import ProfileEdit2 from './components/ProfileEdit2';
 import ProfileEdit3 from './components/ProfileEdit3';
 
 import ProfilePage1 from './components/ProfilePage1';
-
-import FriendList from './components/FriendList'
+import JobSearch from './components/JobSearch';
+import FriendList from './components/FriendList';
 
 
 function App () {
@@ -29,6 +29,7 @@ function App () {
 
 					<Route exact path='/profile1' component={ProfilePage1} />
 					<Route exact path='/friendlist' component={FriendList} />
+					<Route exact path='/jobsearch' component={JobSearch} />
 
 					<Route exact path='/profileview' component={ProfileView} />
 					<Route exact path='/profileedit1' component={ProfileEdit1} />
