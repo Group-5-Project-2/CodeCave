@@ -10,14 +10,18 @@ import "./style.css";
 function FriendList() {
 	const [currentFriends, setFriends] = useState(friends);
 
-	function removeFriend(id) {
+	const removeFriend = (id) => {
 		const newList = currentFriends.filter((item) => item.id !== id);
 		setFriends(newList);
+	}
+
+	const testLog = (id) => {
+		console.log("is it working yet?", id)
 	}
 	return (
 		<div className="friend-list">
 			<ListHeader />
-			<ListGroup friends={currentFriends} remove={removeFriend} />
+			<ListGroup friends={currentFriends} onRemoveFriend={removeFriend} test={testLog} />
 			<SearchFriends />
 		</div>
 	);
