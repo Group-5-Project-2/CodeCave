@@ -18,7 +18,6 @@ function App () {
 		<div className='App'>
 			<Navbar />
 			<Router >
-			<p>Test Friend List <a href="/friendlist">here</a></p>
 				<Switch >
 					<Route exact path='/' component={Login} />
 					<Route exact path='/signup' component={Signup} />
