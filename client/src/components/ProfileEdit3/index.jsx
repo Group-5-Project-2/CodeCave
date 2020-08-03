@@ -2,8 +2,8 @@ import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 
 const ProfileEdit3 = () => {
-  return (
-    <MDBContainer>
+  return (<div className="shadow-box-example z-depth-5">
+    <MDBContainer >
       <MDBRow>
         <div style={{ marginTop: "10px", fontSize: "40px" }}>Skills</div>
       </MDBRow>
@@ -137,7 +137,7 @@ const ProfileEdit3 = () => {
 
       <MDBRow end>
             <div className="text-center">
-              <MDBBtn color="primary">{"Save & Next"}</MDBBtn>
+              <MDBBtn color="primary">{"Save"}</MDBBtn>
             </div>
             <div
               style={{ marginLeft: "10px", marginRight: "15px" }}
@@ -147,6 +147,7 @@ const ProfileEdit3 = () => {
             </div>
           </MDBRow>
     </MDBContainer>
+    </div>
   );
 };
 
