@@ -24,7 +24,7 @@ export default function index() {
                         <button type="submit" className="btn btn-default">Login</button>
                     </form>
                     <br />
-                    <p>Or sign up <a href="/signup">here</a></p>
+                    <p>Or sign up <a href="/signup"><form>here</form></a></p>
                 </div>
             </div>
         </div>

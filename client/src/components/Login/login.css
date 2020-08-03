@@ -18,6 +18,8 @@
       text-emphasis: bold;
       font-size: larger;
       font: bold;
-      
+  }
+  form {
+      opacity: .5;
 
   }
