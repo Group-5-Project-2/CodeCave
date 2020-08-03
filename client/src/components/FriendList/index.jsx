@@ -1,5 +1,5 @@
 // import necessary dependencies
-import React from "react";
+import React, { useState } from "react";
 import ListHeader from "./ListHeader"
 import ListGroup from "./ListGroup"
 import friends from "./friendTest.json"
@@ -8,10 +8,13 @@ import "./style.css"
 
 // create main functional component
 function FriendList() {
+    const [currentFriends, setFriends] = useState(friends)
+
+    
     return (
         <div className="friend-list">
         <ListHeader />
-        <ListGroup friends={friends}/>
+        <ListGroup friends={currentFriends}/>
         <SearchFriends />
         </div>
     )
