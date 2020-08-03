@@ -6,7 +6,7 @@ export default function index() {
     return (
         <div class="bg_image">
         
-        <div className="container">
+        <div className="container topmiddle">
 
         
             <div className="row">

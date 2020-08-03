@@ -1,21 +1,25 @@
- /* .container {
-    float: center;
-    width: 100;
-    border 3px solid white;
-    padding: 10px;
-} */
 .bg_image{
     background-image: url('./Cave.jpg');
     background-size: cover;
     height: 100vh;
+    position: relative;
+  }
+  .topmiddle {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    margin-right: -50%;
+    transform: translateY(-50%);
   }
   .row {
       color: white;
   }
   .btn {
-      color: black;
-      font-weight: bold;
-      background-color: green;
+      /* color: rgb(61, 61, 61); */
+      color: white;
+      font-size: larger;
+      background-color: rgb(94, 109, 72);
   }
   a {
       color: white;
@@ -24,8 +28,9 @@
       text-emphasis: bold;
       font-size: larger;
       font: bold;
-  }
-  form {
-      opacity: .5;
-
+  } 
+  a:hover {
+      background-color: rgb(94, 109, 72);
+      color: white;
+      padding:4px 3px;
   }
