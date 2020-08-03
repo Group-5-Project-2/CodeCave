@@ -1,0 +1,21 @@
+.bg_image{
+    background-image: url('./Cave.jpg');
+    background-size: cover;
+    height: 100vh;
+  }
+  .row {
+      color: white;
+  }
+  .btn {
+      color: black;
+      font-weight: bold;
+      background-color: green;
+  }
+  a {
+      color: rgb(240, 82, 82);
+      font: bold;
+      font-size: larger;
+      text-shadow: 1px 1px white;
+      
+
+  }

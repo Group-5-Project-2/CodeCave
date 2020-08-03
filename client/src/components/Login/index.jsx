@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Cave from './Cave.jpg';
+import './login.css';
 
 export default function index() {
     return (
+        <div class="bg_image">
+        
         <div className="container">
+
+        
             <div className="row">
                 <div className="col-md-6 col-md-offset-3">
                     <h2>Login Form</h2>
@@ -22,5 +28,7 @@ export default function index() {
                 </div>
             </div>
         </div>
-    )
+        </div>
+    );
+
 }
