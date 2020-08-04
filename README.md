@@ -14,7 +14,7 @@ A social space to conduct job searches while being able to connect with other Bo
   - [Wireframes](#wireframes)
   - [MVP](#mvp)
 - [Challenges](#Challenges)
-- [Planned Enhancements](#Planned Enhancements)
+- [Planned Enhancements](#planned-enhancements)
 - [Tech Stack](#tech-stack)
 - [Team Members](#team-members)
 - [Project Board](https://github.com/Group-5-Project-2/CodeCave/projects/1)
