@@ -13,16 +13,11 @@ import ProfileEdit2 from './components/ProfileEdit2';
 import ProfileEdit3 from './components/ProfileEdit3';
 import FriendList from './components/FriendList';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-// import { NavigationBar } from './components/NavigationBar';
-import Sidebar from './components/Sidebar/Sidebar'
-
 
 function App () {
 	return (
 		<div className='App'>
 			<Navbar />
-			{/* <NavigationBar /> */}
-			<Sidebar />
 			<Router >
 				<Switch >
 					<Route exact path='/' component={Login} />
