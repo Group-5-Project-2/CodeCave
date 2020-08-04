@@ -3,9 +3,21 @@ import { Form } from "react-bootstrap";
 import { FormControl } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import axios from "axios";
-import config from "./config";
+// import config from "./config";
 
-function seachJobs() {
+var config = {
+    method: "get",
+    url:
+        "https://indeed-com.p.rapidapi.com/search/jobs?query=web%20developer&location=austin,%20tx",
+    headers: {
+        "x-rapidapi-host": "indeed-com.p.rapidapi.com",
+        "x-rapidapi-key": "b4e0d076eamsh2aad7c9cc23c6ddp1f03eajsn735dc906d3ea",
+    },
+};
+
+
+function seachJobs(e) {
+e.preventDefault();
 	axios(config)
 		.then(function (response) {
 			console.log(JSON.stringify(response.data));
@@ -23,14 +35,14 @@ class JobSearch extends Component {
 	render() {
 		return (
 			<div>
-				<Form inline>
+				<Form onSubmit={seachJobs} inline>
 					<FormControl
 						type="text"
 						placeholder="Job Title"
 						className="mr-sm-2"
 					/>
 					<FormControl type="text" placeholder="City" className="mr-sm-2" />
-					<Button onClick={seachJobs} variant="outline-success">
+					<Button type="submit" variant="outline-success">
 						Search
 					</Button>
 				</Form>
@@ -41,7 +53,7 @@ class JobSearch extends Component {
 						className="mr-sm-2"
 					/>
 					<Button
-						onClick={console.log("coming soon...")}
+						type="submit" 
 						variant="outline-success"
 					>
 						Search
