@@ -4,7 +4,7 @@ import "./style.css"
 
 function Friend(props, {onRemoveFriend}) {
 	return <div className="friend">
-		<span >{props.name}</span> <RemoveButton id={props.id} test={props.test}/>
+		<span >{props.name}</span> <RemoveButton id={props.id} onRemoveFriend={props.onRemoveFriend}/>
 	</div>;
 }
 
