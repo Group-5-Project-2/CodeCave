@@ -43,6 +43,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
+    "mdbreact": "^4.27.0",
     "mysql2": "^1.6.5",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",

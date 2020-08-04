@@ -18,9 +18,10 @@
 } */
 
 .friend-list {
-    background-color:lightblue;
+    background-color:#5C9EAD;
     margin:auto;
-    width:50%;
+    margin-top:5%;
+    width:30%;
     padding:10px;
 }
 
@@ -30,4 +31,8 @@
 
 .search-friends {
     padding-left: inherit;
+}
+
+.friendSearchButton {
+    background-color:#eee;
 }

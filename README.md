@@ -13,6 +13,8 @@ A social space to conduct job searches while being able to connect with other Bo
   - [Design](#design)
   - [Wireframes](#wireframes)
   - [MVP](#mvp)
+- [Challenges](#Challenges)
+- [Planned Enhancements](#planned-enhancements)
 - [Tech Stack](#tech-stack)
 - [Team Members](#team-members)
 - [Project Board](https://github.com/Group-5-Project-2/CodeCave/projects/1)
@@ -87,11 +89,8 @@ Coming soon...
 - User will be able to view and manage a friend list
 - User can view list of channels
 - User can view and create new posts in specific channels
-- User can upvote or downvote other user's posts
 - User can search for jobs in search bar
 - User can view and manage their own posts
-- User will be awarded points based on quantity and quality of posts
-- User can view their accumulated points on dashboard
 - Users can exchange direct messages
 ---
 
@@ -103,6 +102,23 @@ Coming soon...
 - Node and Express server.
 - MySQL database with Sequelize ORM.
 - To be deployed with [Heroku](https://www.heroku.com/platform)
+---
+
+
+## Challenges
+
+- Found React and React Bootstrap documention lacking
+- Frequent code breaks highlighting the sensitivity of syntax and numerous options to create desired outcome
+- Forming components requirements in order to work with the backend 
+- Challenges learning to use state and props
+- Breaking tasks into smaller issues/branches to easily close and share with team members - difficult to break tasks up until more is understood
+---
+
+
+## Planned Enhancements
+- User will be awarded points based on quantity and quality of posts
+- User can upvote or downvote other user's posts
+- User can view their accumulated points on dashboard
 ---
 
 

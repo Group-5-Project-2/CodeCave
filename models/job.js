@@ -22,6 +22,10 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        current_jobbio: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        }
 
     });
     return Job;
