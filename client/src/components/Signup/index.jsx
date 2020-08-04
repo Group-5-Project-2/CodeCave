@@ -1,17 +1,50 @@
 import React, { Component } from "react";
 
 export default class index extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			values: {
-				email: "",
-				password: "",
+	state = {
+		values: {
+			email: "",
+			password: "",
+		},
+		isSubmitting: false,
+		isError: false,
+	};
+
+	handleInputChange = (e) =>
+		this.setState({
+			values: { ...this.state.values, [e.target.name]: e.target.value },
+		});
+	submitForm = (e) => {
+		e.preventDefault();
+		this.setState({ isSubmitting: true });
+
+		let response = fetch("/api/signup");
+
+		if (response.ok) {
+			console.log(this.state.values);
+		} else {
+			alert("HTTP ERROR : " + response.status);
+		}
+
+		fetch("/api/signup/:id", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
 			},
-			isSubmitting: false,
-			isError: false,
-		};
-	}
+			body: JSON.stringify(this.state.values),
+		})
+			.then((res) => {
+				this.setState({ isSubmitting: false });
+				return res.json();
+			})
+			.then((data) => {
+				console.log(data);
+				!data.hasOwnProperty("error")
+					? this.setState({ message: data.success })
+					: this.setState({ message: data.error, isError: true });
+			});
+	};
+
 	render() {
 		return (
 			<div>
@@ -45,39 +78,4 @@ export default class index extends Component {
 			</div>
 		);
 	}
-	handleInputChange = (e) =>
-		this.setState({
-			values: { ...this.state.values, [e.target.name]: e.target.value },
-		});
-	submitForm = (e) => {
-		e.preventDefault();
-		this.setState({ isSubmitting: true });
-
-		let response = fetch("/api/signup");
-
-		if (response.ok) {
-			console.log(this.state.values);
-		} else {
-			alert("HTTP ERROR : " + response.status);
-		}
-
-		// 	fetch("/api", {
-		// 		method: "POST",
-		// 		headers: {
-		// 			"Content-Type": "application/json",
-		// 		},
-		// 		body: JSON.stringify(this.state.values),
-		// 	})
-		// 		.then((res) => {
-		// 			this.setState({ isSubmitting: false });
-		// 			return res.json();
-		// 		})
-		// 		.then((data) => {
-		// 			console.log(data);
-		// 			!data.hasOwnProperty("error")
-		// 				? this.setState({ message: data.success })
-		// 				: this.setState({ message: data.error, isError: true });
-		// 		});
-		// };
-	};
 }
