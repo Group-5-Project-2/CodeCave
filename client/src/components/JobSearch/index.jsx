@@ -16,15 +16,16 @@ var config = {
 };
 
 
-function seachJobs(e) {
-e.preventDefault();
-	axios(config)
-		.then(function (response) {
-			console.log(JSON.stringify(response.data));
-		})
-		.catch(function (error) {
-			console.log(error);
-		});
+function seachJobs(event) {
+event.preventDefault();
+console.log(event.target.value)
+	// axios(config)
+	// 	.then(function (response) {
+	// 		console.log(JSON.stringify(response.data));
+	// 	})
+	// 	.catch(function (error) {
+	// 		console.log(error);
+	// 	});
 }
 
 class JobSearch extends Component {
