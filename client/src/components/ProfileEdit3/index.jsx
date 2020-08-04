@@ -1,8 +1,26 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
+import Sidebar from "../Sidebar/Sidebar";
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBDropdown, MDBDropdownMenu, MDBDropdownToggle } from "mdbreact";
 
+const items = [
+  { name: "home", label: "Home" },
+  { name: "billing", label: "Billing" },
+  { name: "settings", label: "Settings" },
+];
 const ProfileEdit3 = () => {
-  return (<div className="shadow-box-example z-depth-5">
+  return (
+    <MDBRow>
+        <MDBCol md="2"><MDBDropdown>
+                <MDBDropdownToggle nav caret>
+                  <span className="mr-2">Channel List</span>
+                </MDBDropdownToggle>
+                <MDBDropdownMenu>
+                <Sidebar items={items}></Sidebar>
+                </MDBDropdownMenu>
+              </MDBDropdown>
+          
+        </MDBCol>
+        <MDBCol md="8"></MDBCol>
     <MDBContainer >
       <MDBRow>
         <div style={{ marginTop: "10px", fontSize: "40px" }}>Skills</div>
@@ -147,7 +165,8 @@ const ProfileEdit3 = () => {
             </div>
           </MDBRow>
     </MDBContainer>
-    </div>
+    </MDBRow>
+    
   );
 };
 

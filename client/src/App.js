@@ -11,11 +11,8 @@ import ProfileView from './components/ProfileView';
 import ProfileEdit1 from './components/ProfileEdit1';
 import ProfileEdit2 from './components/ProfileEdit2';
 import ProfileEdit3 from './components/ProfileEdit3';
-
-import ProfilePage1 from './components/ProfilePage1';
-
-import FriendList from './components/FriendList'
-
+import FriendList from './components/FriendList';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App () {
 	return (
@@ -27,7 +24,6 @@ function App () {
 					<Route exact path='/signup' component={Signup} />
 					<Route exact path='/user' component={User} />
 
-					<Route exact path='/profile1' component={ProfilePage1} />
 					<Route exact path='/friendlist' component={FriendList} />
 
 					<Route exact path='/profileview' component={ProfileView} />
