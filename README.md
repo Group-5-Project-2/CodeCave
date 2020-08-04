@@ -14,6 +14,7 @@ A social space to conduct job searches while being able to connect with other Bo
   - [Wireframes](#wireframes)
   - [MVP](#mvp)
 - [Challenges](#Challenges)
+- [Planned Enhancements](#Planned Enhancements)
 - [Tech Stack](#tech-stack)
 - [Team Members](#team-members)
 - [Project Board](https://github.com/Group-5-Project-2/CodeCave/projects/1)
@@ -55,9 +56,6 @@ A social media application that facilitates a community of coding bootcamp gradu
 <details>
 <summary>Profile View</summary>
 Coming soon...
-- User will be awarded points based on quantity and quality of posts
-- User can upvote or downvote other user's posts
-- User can view their accumulated points on dashboard
 </details>
 
 ---
@@ -114,6 +112,13 @@ Coming soon...
 - Forming components requirements in order to work with the backend 
 - Challenges learning to use state and props
 - Breaking tasks into smaller issues/branches to easily close and share with team members - difficult to break tasks up until more is understood
+---
+
+
+## Planned Enhancements
+- User will be awarded points based on quantity and quality of posts
+- User can upvote or downvote other user's posts
+- User can view their accumulated points on dashboard
 ---
 
 
