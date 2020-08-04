@@ -24,7 +24,7 @@ const JobSearch = () => {
 
 	function handleChange(event) {
 		const { name, value } = event.target;
-		setState({ [name]: value });
+		setState({...searchValue, [name]: value });
 	}
 
 	return (
