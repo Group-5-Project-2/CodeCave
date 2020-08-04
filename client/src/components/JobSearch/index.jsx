@@ -3,6 +3,7 @@ import { Form } from "react-bootstrap";
 import { FormControl } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import axios from "axios";
+import "./style.css";
 // import config from "./config";
 
 const JobSearch = () => {
@@ -11,7 +12,7 @@ const JobSearch = () => {
 
 	function seachJobs(event) {
 		event.preventDefault();
-		console.log(searchValue.city + "" + searchValue.jobTitle);
+		console.log(searchValue.city + " " + searchValue.jobTitle);
 		// axios(config)
 		// 	.then(function (response) {
 		// 		console.log(JSON.stringify(response.data));
@@ -23,9 +24,7 @@ const JobSearch = () => {
 
 	function handleChange(event) {
 		const { name, value } = event.target;
-		setState({
-			[name]: value,
-		});
+		setState({ [name]: value });
 	}
 
 	return (
