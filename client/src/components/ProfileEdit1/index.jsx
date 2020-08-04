@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBDropdown, MDBDropdownMenu, MDBDropdownToggle } from "mdbreact";
+import "./profile1.css"
 
 const items = [
   { name: "home", label: "Home" },
