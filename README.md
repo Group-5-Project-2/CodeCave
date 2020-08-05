@@ -99,7 +99,8 @@ Coming soon...
 - React.js.
 - React Bootstrap
 - Sequelize
-- Node and Express server.
+- Node and Express server
+- Axios, bcript
 - MySQL database with Sequelize ORM.
 - To be deployed with [Heroku](https://www.heroku.com/platform)
 ---
@@ -112,6 +113,7 @@ Coming soon...
 - Forming components requirements in order to work with the backend 
 - Challenges learning to use state and props
 - Breaking tasks into smaller issues/branches to easily close and share with team members - difficult to break tasks up until more is understood
+- Challenged to remember to add Axios to package and then spent hours debugging before remembering to add a proxy.
 ---
 
 
