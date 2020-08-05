@@ -18,7 +18,8 @@ export default function () {
             <Nav.Link href="#home">Message</Nav.Link>
             <Nav.Link href="#link">Channels</Nav.Link>
             <Nav.Link href="/friendlist">Friends</Nav.Link>
-            <Nav.Link href="#link">Contact Support</Nav.Link>
+            <Nav.Link href="/contact">Contact Support</Nav.Link>
+
             
           </Nav>
           <Form inline>

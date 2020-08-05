@@ -11,11 +11,10 @@ import ProfileView from './components/ProfileView';
 import ProfileEdit1 from './components/ProfileEdit1';
 import ProfileEdit2 from './components/ProfileEdit2';
 import ProfileEdit3 from './components/ProfileEdit3';
-import ProfilePage1 from './components/ProfilePage1';
 import JobSearch from './components/JobSearch';
 import FriendList from './components/FriendList';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
+import Contact from './components/Contact';
 
 function App () {
 	return (
@@ -34,6 +33,7 @@ function App () {
 					<Route exact path='/profileedit1' component={ProfileEdit1} />
 					<Route exact path='/profileedit2' component={ProfileEdit2} />
 					<Route exact path='/profileedit3' component={ProfileEdit3} />
+					<Route exact path='/contact' component={Contact} />
 
 				</Switch>
 			</Router>
