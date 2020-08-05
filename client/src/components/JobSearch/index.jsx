@@ -13,24 +13,8 @@ const JobSearch = () => {
 	function seachJobs(event) {
 		event.preventDefault();
 		console.log(`${searchValue.city} ${searchValue.jobTitle}`);
-
-		var api_key = process.env.REACT_APP_SALARY_API_KEY;
-
-		axios({
-			method: "get",
-			url: `https://cors-anywhere.herokuapp.com/https://indeed-com.p.rapidapi.com/salary/insights?title=${searchValue.jobTitle}&location=${searchValue.city}`,
-			headers: {
-				"x-rapidapi-host": "indeed-com.p.rapidapi.com",
-				"x-rapidapi-key": api_key,
-			},
-		})
-			.then(function (response) {
-				console.log(JSON.stringify(response.data));
-			})
-			.catch(function (error) {
-				console.log(error);
-			});
 	}
+		
 
 	function handleJobChange(event) {
 		const { name, value } = event.target;
