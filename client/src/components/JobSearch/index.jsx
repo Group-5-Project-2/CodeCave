@@ -8,11 +8,12 @@ import "./style.css";
 
 const JobSearch = () => {
 	// state goes here
-	const [searchValue, setState] = useState({ city: "", jobTitle: "" });
+	const [searchValue, setSearchValue] = useState({ city: "", jobTitle: "" });
+	const [salarySearch, setSalarySearch] = useState("");
 
 	function seachJobs(event) {
 		event.preventDefault();
-		console.log(searchValue.city + " " + searchValue.jobTitle);
+		console.log(`${searchValue.city} ${searchValue.jobTitle}`);
 		// axios(config)
 		// 	.then(function (response) {
 		// 		console.log(JSON.stringify(response.data));
@@ -22,16 +23,26 @@ const JobSearch = () => {
 		// 	});
 	}
 
-	function handleChange(event) {
+	function searchSalary(event) {
+		event.preventDefault();
+		console.log(salarySearch)
+	}
+
+	function handleJobChange(event) {
 		const { name, value } = event.target;
-		setState({...searchValue, [name]: value });
+		setSearchValue({ ...searchValue, [name]: value });
+	}
+
+	function handleSalaryChange(event) {
+		const { value } = event.target;
+		setSalarySearch(value);
 	}
 
 	return (
 		<div className="searchForm">
 			<Form onSubmit={seachJobs} inline>
 				<FormControl
-					onChange={handleChange}
+					onChange={handleJobChange}
 					type="text"
 					name="city"
 					value={searchValue.city}
@@ -39,7 +50,7 @@ const JobSearch = () => {
 					className="mr-sm-2"
 				/>
 				<FormControl
-					onChange={handleChange}
+					onChange={handleJobChange}
 					type="text"
 					name="jobTitle"
 					value={searchValue.jobTitle}
@@ -50,9 +61,12 @@ const JobSearch = () => {
 					Search
 				</Button>
 			</Form>
-			<Form inline>
+			<Form onSubmit={searchSalary} inline>
 				<FormControl
+					onChange={handleSalaryChange}
 					type="text"
+					name="salaryJobTitle"
+					value={salarySearch}
 					placeholder="Search Average Salary"
 					className="mr-sm-2"
 				/>

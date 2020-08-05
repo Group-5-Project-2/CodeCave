@@ -11,7 +11,6 @@ import ProfileView from './components/ProfileView';
 import ProfileEdit1 from './components/ProfileEdit1';
 import ProfileEdit2 from './components/ProfileEdit2';
 import ProfileEdit3 from './components/ProfileEdit3';
-import ProfilePage1 from './components/ProfilePage1';
 import JobSearch from './components/JobSearch';
 import FriendList from './components/FriendList';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
