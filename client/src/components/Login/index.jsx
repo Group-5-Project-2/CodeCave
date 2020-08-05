@@ -1,45 +1,79 @@
-import React from "react";
+import React, { Component } from 'react'
+import { login } from './../UserFunctions'
+import Cave from "./../Landing/Cave.jpg"
 
-import Cave from "./Cave.jpg";
-import "./login.css";
+class Login extends Component {
+  constructor() {
+    super()
+    this.state = {
+      email: '',
+      password: '',
+      errors: {}
+    }
 
-export default function index() {
-  return (
-    <div class="bg_image">
-      <div className="container topmiddle">
-        <div className="row">
-          <div className="col-md-6 col-md-offset-3">
-            <h2>Login Form</h2>
-            <form className="login">
+    this.onChange = this.onChange.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
+  }
+
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
+  onSubmit(e) {
+    e.preventDefault()
+
+    const user = {
+      email: this.state.email,
+      password: this.state.password
+    }
+
+    login(user).then(res => {
+      if (res) {
+        this.props.history.push(`/profile`)
+      }
+    })
+  }
+
+  render() {
+    return (
+
+          <div className="col-md-6 mt-5 mx-auto">
+            <form noValidate onSubmit={this.onSubmit}>
+              <h1 className="h1 mb-3 font-weight-normal">Please Login</h1>
               <div className="form-group">
-                <label for="exampleInputEmail1">Email address</label>
+                <label htmlFor="email"></label>
                 <input
                   type="email"
                   className="form-control"
-                  id="email-input"
-                  placeholder="Email"
+                  name="email"
+                  placeholder="Enter email"
+                  value={this.state.email}
+                  onChange={this.onChange}
                 />
               </div>
-              <div className="form-group">
-                <label for="exampleInputPassword1">Password</label>
+              <div className="form-group mb-4">
+                <label htmlFor="password"></label>
                 <input
                   type="password"
                   className="form-control"
-                  id="password-input"
+                  name="password"
                   placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.onChange}
                 />
               </div>
-              <button type="submit" className="btn btn-default">
-                Login
+              <button
+                type="submit"
+                className="btn btn-lg btn-dark btn-block"
+              >
+                Sign in
               </button>
             </form>
-            <br />
-            <p>
-              Or sign up <a href="/signup">here</a>
-            </p>
+          <br />
+          <p>New user sign up <a href="/signup">here</a></p>
           </div>
-        </div>
-      </div>
-    </div>
-  );
+    )
+  }
 }
+
+export default Login
