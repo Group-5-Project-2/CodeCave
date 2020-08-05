@@ -6,7 +6,7 @@ import axios from "axios";
 import "./style.css";
 // import config from "./config";
 
-var api_key = process.env.REACT_APP_SALARY_API_KEY;
+
 
 const JobSearch = () => {
 	// state goes here
@@ -16,9 +16,10 @@ const JobSearch = () => {
 	function seachJobs(event) {
 		event.preventDefault();
 		console.log(`${searchValue.city} ${searchValue.jobTitle}`);
+		var api_key = process.env.REACT_APP_SALARY_API_KEY;
 		axios({
 			method: "get",
-			url: `https://cors-anywhere.herokuapp.com/https://indeed-com.p.rapidapi.com/salary/insights?title=${searchValue.jobTitle}&location=${searchValue.city}`,
+			url: `https://indeed-com.p.rapidapi.com/salary/insights?title=${searchValue.jobTitle}&location=${searchValue.city}`,
 			headers: {
 				"x-rapidapi-host": "indeed-com.p.rapidapi.com",
 				"x-rapidapi-key": api_key,
@@ -70,21 +71,31 @@ const JobSearch = () => {
 					Search
 				</Button>
 			</Form>
-			<Form onSubmit={searchSalary} inline>
-				<FormControl
-					onChange={handleSalaryChange}
-					type="text"
-					name="salaryCity"
-					value={salarySearch}
-					placeholder="Search Average Salary"
-					className="mr-sm-2"
-				/>
-				<Button type="submit" variant="outline-success">
-					Search
-				</Button>
-			</Form>
 		</div>
 	);
 };
 
 export default JobSearch;
+
+
+
+
+// var config = {
+// 	method: 'get',
+// 	url: 'https://indeed-com.p.rapidapi.com/salary/insights?title=web developer&location=austin',
+// 	headers: { 
+// 	  'x-rapidapi-host': 'indeed-com.p.rapidapi.com', 
+// 	  'x-rapidapi-key': 'b4e0d076eamsh2aad7c9cc23c6ddp1f03eajsn735dc906d3ea'
+// 	}
+//   };
+  
+//   axios(config)
+//   .then(function (response) {
+// 	console.log(JSON.stringify(response.data));
+//   })
+//   .catch(function (error) {
+// 	console.log(error);
+//   });
+  
+
+// https://cors-anywhere.herokuapp.com/
