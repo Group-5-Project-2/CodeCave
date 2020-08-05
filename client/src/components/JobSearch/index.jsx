@@ -6,6 +6,8 @@ import axios from "axios";
 import "./style.css";
 // import config from "./config";
 
+var api_key = process.env.REACT_APP_SALARY_API_KEY;
+
 const JobSearch = () => {
 	// state goes here
 	const [searchValue, setSearchValue] = useState({ city: "", jobTitle: "" });
@@ -14,18 +16,25 @@ const JobSearch = () => {
 	function seachJobs(event) {
 		event.preventDefault();
 		console.log(`${searchValue.city} ${searchValue.jobTitle}`);
-		// axios(config)
-		// 	.then(function (response) {
-		// 		console.log(JSON.stringify(response.data));
-		// 	})
-		// 	.catch(function (error) {
-		// 		console.log(error);
-		// 	});
+		axios({
+			method: "get",
+			url: `https://cors-anywhere.herokuapp.com/https://indeed-com.p.rapidapi.com/salary/insights?title=${searchValue.jobTitle}&location=${searchValue.city}`,
+			headers: {
+				"x-rapidapi-host": "indeed-com.p.rapidapi.com",
+				"x-rapidapi-key": api_key,
+			},
+		})
+			.then(function (response) {
+				console.log(JSON.stringify(response.data));
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
 	}
 
 	function searchSalary(event) {
 		event.preventDefault();
-		console.log(salarySearch)
+		console.log(salarySearch);
 	}
 
 	function handleJobChange(event) {
@@ -46,7 +55,7 @@ const JobSearch = () => {
 					type="text"
 					name="city"
 					value={searchValue.city}
-					placeholder="Job Title"
+					placeholder="City"
 					className="mr-sm-2"
 				/>
 				<FormControl
@@ -54,7 +63,7 @@ const JobSearch = () => {
 					type="text"
 					name="jobTitle"
 					value={searchValue.jobTitle}
-					placeholder="City"
+					placeholder="Job Title"
 					className="mr-sm-2"
 				/>
 				<Button type="submit" variant="outline-success">
@@ -65,7 +74,7 @@ const JobSearch = () => {
 				<FormControl
 					onChange={handleSalaryChange}
 					type="text"
-					name="salaryJobTitle"
+					name="salaryCity"
 					value={salarySearch}
 					placeholder="Search Average Salary"
 					className="mr-sm-2"
