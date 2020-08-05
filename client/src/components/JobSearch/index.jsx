@@ -18,7 +18,7 @@ const JobSearch = () => {
 
 		axios({
 			method: "get",
-			url: `https://indeed-com.p.rapidapi.com/salary/insights?title=${searchValue.jobTitle}&location=${searchValue.city}`,
+			url: `https://cors-anywhere.herokuapp.com/https://indeed-com.p.rapidapi.com/salary/insights?title=${searchValue.jobTitle}&location=${searchValue.city}`,
 			headers: {
 				"x-rapidapi-host": "indeed-com.p.rapidapi.com",
 				"x-rapidapi-key": api_key,
