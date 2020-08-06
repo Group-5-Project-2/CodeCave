@@ -1,58 +1,58 @@
-const user = require("./user");
 
-module.exports = function (sequelize, DataTypes) {
-    var Profile = sequelize.define("Profile", {
+
+const Sequelize = require('sequelize')
+const db = require('../database/db.js')
+module.exports = db.sequelize.define(
+    'profile',
+    {
         profileId: {
-            type: DataTypes.INTEGER(11),
-            allowNull: false,
+            type: Sequelize.INTEGER(11),
+
             autoIncrement: true,
             primaryKey: true,
         },
-        first_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        last_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         job_title: {
-            type: DataTypes.STRING,
-            allowNull: true,
+            type: Sequelize.STRING,
+
         },
         profile_picture: {
-            type: DataTypes.BLOB,
+            type: Sequelize.BLOB,
         },
         resume: {
-            type: DataTypes.BLOB,
+            type: Sequelize.BLOB,
         },
         github: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
         },
         portfolio: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
         },
         about_me: {
-            type: DataTypes.STRING(300),
+            type: Sequelize.STRING(300),
         },
         city: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
         },
         state: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
         },
         userId: {
-            type: DataTypes.INTEGER(11),
-            allowNull: false,
+            type: Sequelize.INTEGER(11),
+            foreignKey: true,
         },
 
+        created: {
+            type: Sequelize.DATE,
+            defaultValue: Sequelize.NOW
+        }
+    },
+    {
+        timestamps: false
+    },
+)
+// Profile.associate = function (models) {
+//     Profile.belongsTo(models.User, {
+//         foreignKey: "userId",
 
-    })
-    Profile.associate = function (models) {
-        Profile.belongsTo(models.User, {
-            foreignKey: "userId",
-            allowNull: false,
-        })
-    };
-    return Profile;
-};
+//     })
+// };
