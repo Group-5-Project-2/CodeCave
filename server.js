@@ -26,10 +26,9 @@ if (environment === "production") {
 // app.use(passport.session());
 
 // Add routes, both API and view
-const jobs = require("./controllers/api/jobSearch");
-app.use("/jobs", jobs)
+const routes = require("./controllers");
+app.use(routes);
 
-// app.use(routes);
 const Users = require("./controllers/Users");
 app.use("/users", Users);
 

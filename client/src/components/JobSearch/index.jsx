@@ -13,10 +13,23 @@ const JobSearch = () => {
 	function seachJobs(event) {
 		event.preventDefault();
 		console.log(`${searchValue.city} ${searchValue.jobTitle}`);
-	}
-		
 
-	function handleJobChange(event) {
+		var config = {
+			method: "get",
+			url: `/api/jobs/search?title=${searchValue.jobTitle}?location=${searchValue.city}`,
+			headers: {},
+		};
+
+		axios(config)
+			.then(function (response) {
+				console.log(JSON.stringify(response.data));
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
+	}
+
+	function onChange(event) {
 		const { name, value } = event.target;
 		setSearchValue({ ...searchValue, [name]: value });
 	}
@@ -25,7 +38,7 @@ const JobSearch = () => {
 		<div className="searchForm">
 			<Form onSubmit={seachJobs} inline>
 				<FormControl
-					onChange={handleJobChange}
+					onChange={onChange}
 					type="text"
 					name="city"
 					value={searchValue.city}
@@ -33,7 +46,7 @@ const JobSearch = () => {
 					className="mr-sm-2"
 				/>
 				<FormControl
-					onChange={handleJobChange}
+					onChange={onChange}
 					type="text"
 					name="jobTitle"
 					value={searchValue.jobTitle}
