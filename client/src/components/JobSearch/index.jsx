@@ -16,7 +16,7 @@ const JobSearch = () => {
 
 		var config = {
 			method: "get",
-			url: `/api/jobs/search?title=${searchValue.jobTitle}&location=${searchValue.city}`,
+			url: `/jobs/search?title=${searchValue.jobTitle}&location=${searchValue.city}`,
 			headers: {},
 		};
 
