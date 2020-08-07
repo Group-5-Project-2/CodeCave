@@ -6,6 +6,8 @@ const cors = require("cors")
 
 require('dotenv').config();
 
+console.log(process.env);
+
 // PORT
 const PORT = process.env.PORT || 3001;
 // Models
@@ -39,6 +41,9 @@ app.use("/users", Users);
 
 const Profiles = require("./controllers/Profiles");
 app.use("/profiles", Profiles);
+
+const Jobs = require("./controllers/Jobs");
+app.use("/jobs", Jobs);
 
 
 // Start the API server
