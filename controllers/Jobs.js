@@ -13,7 +13,7 @@ router.get("/search", async (req, res) => {
 
 	var config1 = {
 		method: "get",
-		url: `https://cors-anywhere.herokuapp.com/https://indeed-com.p.rapidapi.com/salary/insights?title=${queryTitle}&location=${queryLocation}`,
+		url: `https://indeed-com.p.rapidapi.com/salary/insights?title=${queryTitle}&location=${queryLocation}`,
 		headers: {
 			"x-rapidapi-host": "indeed-com.p.rapidapi.com",
 			"x-rapidapi-key": process.env.API_KEY,
@@ -31,11 +31,15 @@ router.get("/search", async (req, res) => {
     
 	await axios(config1)
 		.then(function (response) {
-            console.log(JSON.stringify(response.data));
+			console.log(JSON.stringify(response.data));
+			response.end(data);
 		})
 		.catch(function (error) {
 			console.log(error);
-        });
+		});
+		
 });
 
 module.exports = router;
+
+// https://cors-anywhere.herokuapp.com/

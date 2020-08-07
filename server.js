@@ -6,7 +6,7 @@ const cors = require("cors")
 
 require('dotenv').config();
 
-console.log(process.env);
+// console.log(process.env);
 
 // PORT
 const PORT = process.env.PORT || 3001;
