@@ -70,6 +70,11 @@ class Landing extends Component {
                 Find Jobs
               </Link>
             </Nav.Link>
+            <Nav.Link>
+              <Link to="/contact" className="nav-link">
+                Contact Us
+              </Link>
+            </Nav.Link>
           </Nav>
           {localStorage.usertoken ? userLink : loginRegLink}
         </Navbar.Collapse>
