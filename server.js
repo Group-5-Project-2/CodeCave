@@ -32,6 +32,9 @@ app.use(routes);
 const Users = require("./controllers/Users");
 app.use("/users", Users);
 
+const Profiles = require("./controllers/Profiles");
+app.use("/profiles", Profiles);
+
 
 // Start the API server
 // ADD SEQUELIZE HERE TO CONNECT TO YOUR DB
