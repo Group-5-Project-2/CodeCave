@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 // Serve up static assets
-console.log(process.env.NODE_ENV);
+// console.log(process.env.NODE_ENV);
 const environment = process.env.NODE_ENV || "development";
 if (environment === "production") {
 	app.use(express.static("client/build"));

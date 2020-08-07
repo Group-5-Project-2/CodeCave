@@ -1,6 +1,6 @@
 import React from "react";
 
-import Cave from "./Cave.jpg";
+// import Cave from "./Cave.jpg";
 import "./login.css";
 
 export default function index() {

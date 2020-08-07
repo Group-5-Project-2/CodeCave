@@ -1,9 +1,9 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import FiguresPage from "./Figure";
-import GitHubLink from "./GitHubLink";
-import Portfolio from "./Portfolio";
-import Resume from "./Resume";
+// import GitHubLink from "./GitHubLink";
+// import Portfolio from "./Portfolio";
+// import Resume from "./Resume";
 // import ProfileHeaderTop from "./ProfileHeaderTop";
 import TabsJustified from "./TabsJustified"
 import { Jumbotron } from "reactstrap";

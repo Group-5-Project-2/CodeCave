@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { FormControl } from "react-bootstrap";
 import { Button } from "react-bootstrap";
@@ -16,7 +16,7 @@ const JobSearch = () => {
 
 		var config = {
 			method: "get",
-			url: `/api/jobs/search?title=${searchValue.jobTitle}?location=${searchValue.city}`,
+			url: `/api/jobs/search?title=${searchValue.jobTitle}&location=${searchValue.city}`,
 			headers: {},
 		};
 
@@ -64,3 +64,5 @@ const JobSearch = () => {
 export default JobSearch;
 
 // https://cors-anywhere.herokuapp.com/
+
+// 

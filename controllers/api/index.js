@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const jobSearchRoutes = require('./jobSearch')
+const jobSearchRoutes = require('./jobSearch.js')
 var db = require('../../models');
 
 // const userRoutes = require('./user');

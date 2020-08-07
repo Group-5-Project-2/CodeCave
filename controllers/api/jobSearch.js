@@ -1,6 +1,10 @@
 const router = require("express").Router();
+const axios = require("axios")
+require ("dotenv").config()
 
-router.get("/search", function (req, res) {
+
+router.get("/search", async (req, res) => {
+    console.log("seach route hit")
 	const queryTitle = req.query.title;
 	const queryLocation = req.query.location;
 	console.log(`title: ${queryTitle}, location: ${queryLocation}`);
@@ -25,13 +29,13 @@ router.get("/search", function (req, res) {
 		},
     };
     
-	axios(config1)
+	await axios(config1)
 		.then(function (response) {
-			console.log(JSON.stringify(response.data));
+            console.log(JSON.stringify(response.data));
 		})
 		.catch(function (error) {
 			console.log(error);
-		});
+        });
 });
 
 module.exports = router;
