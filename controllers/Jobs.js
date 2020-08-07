@@ -21,7 +21,7 @@ router.get("jobs/search", (req, res) => {
 		},
 	};
 
-	// coniguration to get job listings data
+	// configuration to get job listings data
 	var config2 = {
 		method: "get",
 		url: `https://indeed-com.p.rapidapi.com/search/jobs?query=${queryTitle}&location=${queryLocation}`,
