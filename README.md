@@ -24,6 +24,8 @@ A social space to conduct job searches while being able to connect with other Bo
 
 ## Value Proposal
 
+- Allows unregistered users to view job search and register
+- Allows users to securely login then logOut
 - Allows users to build a profile
 - Allows users to search for job listings based on profile skills and other data
 - View data on job titles such as average salary
@@ -50,7 +52,7 @@ A social media application that facilitates a community of coding bootcamp gradu
 
 <details>
 <summary>Main Views</summary>
-<img src="client\public\images\LoginDrawIO.png" width = "600px">
+<img src="client\public\images\LandingDesign.png" width = "600px">
 </details>
 
 <details>
@@ -83,15 +85,14 @@ Coming soon...
 #### MVP
 
 - User can register after validating email
-- User can log in with user name and password
-- Upon successful log in, user will gain access to dashboard
+- User can login with user name and password
+- Upon successful login, user will gain access to dashboard
 - User will be able to view and edit their own Profile
 - User will be able to view and manage a friend list
 - User can view list of channels
 - User can view and create new posts in specific channels
 - User can search for jobs in search bar
 - User can view and manage their own posts
-- Users can exchange direct messages
 ---
 
 ## Tech Stack
@@ -100,7 +101,7 @@ Coming soon...
 - React Bootstrap
 - Sequelize
 - Node and Express server
-- Axios, bcript
+- Axios, bcript, Json Web Token
 - MySQL database with Sequelize ORM.
 - To be deployed with [Heroku](https://www.heroku.com/platform)
 ---
@@ -114,13 +115,18 @@ Coming soon...
 - Challenges learning to use state and props
 - Breaking tasks into smaller issues/branches to easily close and share with team members - difficult to break tasks up until more is understood
 - Challenged to remember to add Axios to package and then spent hours debugging before remembering to add a proxy.
+- Started with PassPort but moved to Cors with bcript and json Web Token
+- Difficult tracking/maintaining changes each member made to get code to work without impacting other team member's work and then reconnecting those "links" at the end
 ---
 
 
 ## Planned Enhancements
+- Authentication of university bootcamp to generate key for registration
+- Messaging between users/friends
 - User will be awarded points based on quantity and quality of posts
 - User can upvote or downvote other user's posts
 - User can view their accumulated points on dashboard
+
 ---
 
 
