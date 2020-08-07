@@ -4,7 +4,6 @@ import { FormControl } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import axios from "axios";
 import "./style.css";
-// import config from "./config";
 
 const JobSearch = () => {
 	// state goes here
@@ -62,7 +61,3 @@ const JobSearch = () => {
 };
 
 export default JobSearch;
-
-// https://cors-anywhere.herokuapp.com/
-
-// 

@@ -13,6 +13,8 @@ import Register from './components/Register'
 import Profile from './components/Profile'
 import Profileform from './components/Profileform'
 
+import JobSearch from "./components/JobSearch"
+
 class App extends Component {
   render() {
     return (
@@ -25,6 +27,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/profilePage" component={Profileform} />
+            <Route exact path="/jobs" component={JobSearch} />
           </div>
           <Footer />
         </div>
