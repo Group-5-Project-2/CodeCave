@@ -3,8 +3,7 @@ const axios = require("axios")
 require ("dotenv").config()
 
 
-router.get("/search", async (req, res) => {
-    console.log("seach route hit")
+router.get("/search", (req, res) => {
 	const queryTitle = req.query.title;
 	const queryLocation = req.query.location;
 	console.log(`title: ${queryTitle}, location: ${queryLocation}`);
@@ -29,14 +28,14 @@ router.get("/search", async (req, res) => {
 		},
     };
     
-	await axios(config1)
+	return axios(config1)
 		.then(function (response) {
-			console.log(JSON.stringify(response.data));
-			response.end(data);
+			const jobData = response.data.averageSalary.toFixed(2)
+			resultsData.push(jobData);
 		})
 		.catch(function (error) {
 			console.log(error);
-		});
+		})
 		
 });
 
