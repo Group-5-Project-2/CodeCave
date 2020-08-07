@@ -3,11 +3,16 @@ const express = require("express");
 // Requiring passport for login password protection
 // const passport = require("./config/passport"); moving from paasport to cors
 const cors = require("cors")
+
+require('dotenv').config();
+
 // PORT
 const PORT = process.env.PORT || 3001;
 // Models
 const db = require("./database/db");
 // naming express function
+
+
 const app = express();
 // express 
 app.use(express.urlencoded({ extended: false }));
@@ -26,8 +31,8 @@ if (environment === "production") {
 // app.use(passport.session());
 
 // Add routes, both API and view
-const routes = require("./controllers");
-app.use(routes);
+// const routes = require("./controllers");
+// app.use(routes);
 
 const Users = require("./controllers/Users");
 app.use("/users", Users);
