@@ -1,8 +1,6 @@
 // import Cave from "./Cave.jpg";
-import "./login.css";
 import React, { Component } from 'react'
 import { login } from './../UserFunctions'
-import Cave from "./../Landing/Cave.jpg"
 
 class Login extends Component {
   constructor() {
