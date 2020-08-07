@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors());
 // Serve up static assets
-console.log(process.env.NODE_ENV);
+// console.log(process.env.NODE_ENV);
 const environment = process.env.NODE_ENV || "development";
 if (environment === "production") {
 	app.use(express.static("client/build"));
@@ -26,8 +26,9 @@ if (environment === "production") {
 // app.use(passport.session());
 
 // Add routes, both API and view
-// const routes = require("./controllers");
-// app.use(routes);
+const routes = require("./controllers");
+app.use(routes);
+
 const Users = require("./controllers/Users");
 app.use("/users", Users);
 

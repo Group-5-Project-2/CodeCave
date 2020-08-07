@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const jobSearchRoutes = require('./jobSearch.js')
 var db = require('../../models');
 
 // const userRoutes = require('./user');
@@ -18,7 +19,7 @@ router.post('/api/signup', function (req, res) {
 });
 
 // insert routes
-
+router.use("/jobs", jobSearchRoutes);
 // router.use('/user', userRoutes);
 
 module.exports = router;

@@ -19,7 +19,7 @@ if (config.use_env_variable) {
     sequelize = new Sequelize(databaseName, userName, passwordis, {
         host: hostName,
         dialect: 'mysql',
-        operatorsAliases: false,
+        operatorsAliases: 1,
 
         pool: {
             max: 5,
