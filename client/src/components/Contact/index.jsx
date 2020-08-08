@@ -16,30 +16,33 @@ export default function index() {
           </div>
           <div className="col-md-8">
             <div className="row">
-              <Showcard 
-                img="./images/Daniel.jpg"
-                title="Daniel"
+              <Showcard
+                img="./images/Daniel.png"
+                title="Changyeon Daniel Hong"
+                text="I am awesome!"
+                linkedin="https://linkedin.com/in/changyeon-hong-centraltexas/"
+                github="https://github.com"
+              />
+              <Showcard
+                img="./images/Diane.png"
+                title="Diane Candler"
+                text="Full Stack Developer, Experienced Product Manager plus
+                 Marketing, Interior Decorator - talented @ restoring historic properties, Active Volunteer, mom, energetic
+
+                  "
+                linkedin="https://linkedin.com/in/diane-candler-centraltexas"
+                github="https://dianecandler.github.io/"
+              />
+              <Showcard
+                img="./images/Conner.png"
+                title="Conner McBride"
                 text="I am awesome!"
                 linkedin="https://linkedin.com"
                 github="https://github.com"
               />
-              <Showcard 
-                img="./images/Daniel.jpg"
-                title="Daniel"
-                text="I am awesome!"
-                linkedin="https://linkedin.com"
-                github="https://github.com"
-              />
-              <Showcard 
-                img="./images/Daniel.jpg"
-                title="Daniel"
-                text="I am awesome!"
-                linkedin="https://linkedin.com"
-                github="https://github.com"
-              />
-              <Showcard 
-                img="./images/Daniel.jpg"
-                title="Daniel"
+              <Showcard
+                img="./images/Joshua.png"
+                title="Joshua Martinez"
                 text="I am awesome!"
                 linkedin="https://linkedin.com"
                 github="https://github.com"
@@ -49,7 +52,9 @@ export default function index() {
         </div>
         <div className="row pt-5">
           <div className="col-12">
-            <h3 className="text-center pb-4">Surrmary</h3>
+            <h3 className="text-center pb-4 text-left">Sharing insight into the development:</h3>
+
+            <h6>Four students from The University of Texas at Austin came together for 2.5 weeks to design and deliver this application and deliver features required for Project 2 cirriculum.  Here are a few examples of the work we put into creating this full stack program.</h6>
             <Carousel>
               <Carousel.Item>
                 <img
