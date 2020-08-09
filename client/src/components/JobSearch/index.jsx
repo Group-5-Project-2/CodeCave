@@ -3,6 +3,7 @@ import { Form } from "react-bootstrap";
 import { FormControl } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import SearchResults from "./SearchResults";
+import JobListings from "./JobListings"
 import axios from "axios";
 import "./style.css";
 
@@ -18,7 +19,9 @@ const JobSearch = () => {
 	function renderResults () {
 		if (isDataLoaded === true) {
 			
-			return <SearchResults title={searchValue.jobTitle} city={searchValue.city} avgSalary={averageSalary}> </SearchResults>
+			return <div><SearchResults title={searchValue.jobTitle} city={searchValue.city} avgSalary={averageSalary}> </SearchResults>
+			<JobListings listings={jobListings}></JobListings>
+			</div>
 		}
 	}
 	
