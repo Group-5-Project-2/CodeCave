@@ -3,7 +3,7 @@ import React from "react";
 const Job = (props) => {
 	return (
 		<div>
-			<span>{props.jobtitle}</span>
+			<span>{props.title}</span>
 		</div>
 	);
 };
