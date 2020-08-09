@@ -12,7 +12,8 @@ const JobSearch = () => {
 	// state goes here
 	const [searchValue, setSearchValue] = useState({ city: "", jobTitle: "" });
 	const [averageSalary, setAverageSalary] = useState(0);
-	const [isDataLoaded, setIsDataLoaded] = useState(false)
+	const [isDataLoaded, setIsDataLoaded] = useState(false);
+	const [jobListings, setJobListings] = useState([]);
 
 	function renderResults () {
 		if (isDataLoaded === true) {
@@ -35,6 +36,7 @@ const JobSearch = () => {
 		axios(config)
 			.then(function (response) {
 				setAverageSalary(response.data[0].averageSalary);
+				setJobListings(response.data[1])
 				setIsDataLoaded(true)
 				
 			})
