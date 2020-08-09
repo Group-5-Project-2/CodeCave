@@ -100,7 +100,7 @@ Coming soon...
 - React Bootstrap
 - Sequelize
 - Node and Express server
-- Axios, bcript
+- Axios, bcript, JSON Web Token
 - MySQL database with Sequelize ORM.
 - To be deployed with [Heroku](https://www.heroku.com/platform)
 ---

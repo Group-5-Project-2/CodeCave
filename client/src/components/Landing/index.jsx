@@ -26,7 +26,7 @@ export default function Landing() {
                     }}
                 >
                     <h1 className="h1">Welcome to CodeCave</h1>
-                    <p className="h6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At distinctio obcaecati doloremque temporibus fugiat enim repudiandae, optio repellat est vitae eius nobis aspernatur sequi laudantium consequuntur? Fugiat totam sunt laboriosam.</p>
+                    <p className="h6">an exclusive place Full Stack Bootcamp Coding students and graduates can go to share tips, ask questions, look at job opportunities, or connect through events, activities.</p>
                 </div>
             </div>
         </div>
