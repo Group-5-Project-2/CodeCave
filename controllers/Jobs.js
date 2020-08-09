@@ -4,7 +4,7 @@ const axios = require("axios");
 require("dotenv").config();
 
 // prepare router to use route
-router.get("jobs/search", (req, res) => {
+router.get("/search", (req, res) => {
 	// assign queries to variables
 	const queryTitle = req.query.title;
 	const queryLocation = req.query.location;
