@@ -1,6 +1,5 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import { Link } from 'react-router-dom';
 import Showcard from './Showcard';
 
 export default function index() {
@@ -54,13 +53,13 @@ export default function index() {
           <div className="col-12">
             <h3 className="text-center pb-4 text-left">Sharing insight into the CodeCave development process</h3>
 
-            <h6>These University of Texas at Austin Full Stack Bootcamp Coding students designed CodeCave using - React.js, React Bootstrap, Sequelize, Node and Express server, Axios, bcript, JSON Web Token, MySQL database with Sequelize ORM, and deployed with <Link to="#" target="_blank"><strong>Heroku</strong></Link>.</h6>
+            <h6>These University of Texas at Austin Full Stack Bootcamp Coding students designed CodeCave using - React.js, React Bootstrap, Sequelize, Node and Express server, Axios, bcript, JSON Web Token, MySQL database with Sequelize ORM, and deployed with <a href="https://codecave.herokuapp.com/" target="_blank"><strong>Heroku</strong></a>.</h6>
             <Carousel>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
                   // src="holder.js/800x400?text=First slide&bg=373940"
-                  src="./images/ProfilePageDiagram.png" 
+                  src="./images/ProfilePageDiagram.png"
                   alt="First slide"
                 />
                 {/* <Carousel.Caption>
@@ -72,7 +71,7 @@ export default function index() {
                 <img
                   className="d-block w-100"
                   // src="holder.js/800x400?text=Second slide&bg=282c34"
-                  src="./images/ProfilePageDiagram.png" thumbnail
+                  src="./images/ProfilePageDiagram.png"
                   alt="Third slide"
                 />
 
