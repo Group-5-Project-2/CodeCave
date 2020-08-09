@@ -12,6 +12,7 @@ import Landing from './components/Landing'
 import Register from './components/Register'
 import Profile from './components/Profile'
 import Profileform from './components/Profileform'
+import Contact from './components/Contact'
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/profilePage" component={Profileform} />
+            <Route exact path="/contact" component={Contact} />
           </div>
           <Footer />
         </div>
