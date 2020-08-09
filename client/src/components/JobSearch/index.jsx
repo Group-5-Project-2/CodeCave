@@ -10,7 +10,7 @@ import "./style.css";
 const JobSearch = () => {
 	// state goes here
 	const [searchValue, setSearchValue] = useState({ city: "", jobTitle: "" });
-	const [averageSalary, setAverageSalary] = useState({})
+	const [averageSalary, setAverageSalary] = useState(0)
 
 	function seachJobs(event) {
 		event.preventDefault();
@@ -24,8 +24,9 @@ const JobSearch = () => {
 
 		axios(config)
 			.then(function (response) {
-				console.log(averageSalary);
-				setAverageSalary(response.data[0]);
+				console.log(response.data[0]);
+				console.log(setAverageSalary)
+				setAverageSalary(response.data[0].averageSalary);
 				
 			})
 			.catch(function (error) {
@@ -62,6 +63,7 @@ const JobSearch = () => {
 					Search
 				</Button>
 			</Form>
+			<div><p>Average Salary for {searchValue.jobTitle} in {searchValue.city}: {averageSalary}</p></div>
 		</div>
 	);
 };
