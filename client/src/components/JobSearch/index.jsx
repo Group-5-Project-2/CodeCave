@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { FormControl } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import SearchResults from "./SearchResults";
 import axios from "axios";
 import "./style.css";
 
@@ -10,8 +11,17 @@ import "./style.css";
 const JobSearch = () => {
 	// state goes here
 	const [searchValue, setSearchValue] = useState({ city: "", jobTitle: "" });
-	const [averageSalary, setAverageSalary] = useState(0)
+	const [averageSalary, setAverageSalary] = useState(0);
+	const [isDataLoaded, setIsDataLoaded] = useState(false)
 
+	function renderResults () {
+		if (isDataLoaded === true) {
+			
+			return <SearchResults title={searchValue.jobTitle} city={searchValue.city} avgSalary={averageSalary}> </SearchResults>
+		}
+	}
+	
+	
 	function seachJobs(event) {
 		event.preventDefault();
 		console.log(`${searchValue.city} ${searchValue.jobTitle}`);
@@ -24,15 +34,14 @@ const JobSearch = () => {
 
 		axios(config)
 			.then(function (response) {
-				console.log(response.data[0]);
-				console.log(setAverageSalary)
 				setAverageSalary(response.data[0].averageSalary);
+				setIsDataLoaded(true)
 				
 			})
 			.catch(function (error) {
 				console.log(error);
 			});
-			
+			renderResults();
 	}
 
 	function onChange(event) {
@@ -63,7 +72,7 @@ const JobSearch = () => {
 					Search
 				</Button>
 			</Form>
-			<div><p>Average Salary for {searchValue.jobTitle} in {searchValue.city}: {averageSalary}</p></div>
+			{renderResults()}
 		</div>
 	);
 };
