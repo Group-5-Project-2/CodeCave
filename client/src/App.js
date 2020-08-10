@@ -13,6 +13,7 @@ import Register from './components/Register'
 import Profile from './components/Profile'
 import Profileform from './components/Profileform'
 import Contact from './components/Contact'
+import ProfileView from './components/ProfileView'
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/profilePage" component={Profileform} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/testing" component={ProfileView} />
           </div>
           <Footer />
         </div>
