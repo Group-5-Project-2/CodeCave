@@ -15,7 +15,8 @@ profiles.post('/profilePage', (req, res) => {
         about_me: req.body.about_me,
         city: req.body.city,
         state: req.body.state,
-        created: today
+        created: today,
+        userId: req.body.userId
     };
 
 

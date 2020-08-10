@@ -10,6 +10,11 @@ class Profile extends Component {
 			last_name: "",
 			user_name: "",
 			email: "",
+			jobtitle:"",
+			resume: "",
+			portfolio: "",
+			city: "",
+			state: "",
 			errors: {},
 		};
 	}

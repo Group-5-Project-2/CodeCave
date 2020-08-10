@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { profile } from "./../UserFunctions";
+import jwt_decode from "jwt-decode";
 
 class Profile extends Component {
 	constructor() {
@@ -13,10 +14,17 @@ class Profile extends Component {
 			about_me: "",
 			city: "",
 			state: "",
+			userId: "",
 		};
 
 		this.onChange = this.onChange.bind(this);
 		this.onSubmit = this.onSubmit.bind(this);
+	}
+
+	componentDidMount() {
+		const token = localStorage.usertoken;
+		const decoded = jwt_decode(token);
+		this.setState({userId: decoded.id});
 	}
 
 	onChange(e) {
@@ -34,6 +42,7 @@ class Profile extends Component {
 			about_me: this.state.about_me,
 			city: this.state.city,
 			state: this.state.state,
+			userId: this.state.userId
 		};
 
 		profile(newProfile).then((res) => {
