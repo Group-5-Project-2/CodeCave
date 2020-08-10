@@ -2,6 +2,7 @@
 
 const Sequelize = require('sequelize')
 const db = require('../database/db.js')
+const User = require('./user');
 const Profile = db.sequelize.define(
     'profile',
     {
@@ -16,10 +17,10 @@ const Profile = db.sequelize.define(
 
         },
         profile_picture: {
-            type: Sequelize.BLOB,
+            type: Sequelize.STRING,
         },
         resume: {
-            type: Sequelize.BLOB,
+            type: Sequelize.STRING,
         },
         github: {
             type: Sequelize.STRING,
@@ -50,11 +51,8 @@ const Profile = db.sequelize.define(
         timestamps: false
     },
 )
-Profile.associate = function (models) {
-    Profile.belongsTo(models.User, {
-        foreignKey: "userId",
-
-    })
-};
+Profile.belongsTo(User, {
+    foreignKey: "id"
+});
 
 module.exports = Profile;

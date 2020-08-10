@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 // grab our users data
-const User = require('../models/user.js.break');
+const User = require('../models/user.js');
 
 users.use(cors());
 process.env.SECRET_KEY = 'secret';

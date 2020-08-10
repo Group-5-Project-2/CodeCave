@@ -13,7 +13,6 @@ class Profile extends Component {
 			about_me: "",
 			city: "",
 			state: "",
-			userId: "",
 		};
 
 		this.onChange = this.onChange.bind(this);
@@ -35,7 +34,6 @@ class Profile extends Component {
 			about_me: this.state.about_me,
 			city: this.state.city,
 			state: this.state.state,
-			userId: this.state.userId,
 		};
 
 		profile(newProfile).then((res) => {
@@ -135,17 +133,6 @@ class Profile extends Component {
 									name="state"
 									placeholder=" what state are you from?"
 									value={this.state.state}
-									onChange={this.onChange}
-								/>
-							</div>
-							<div className="form-group">
-								<label htmlFor="userId">User Id</label>
-								<input
-									type="text"
-									className="form-control"
-									name="userId"
-									placeholder=" what is your user id?"
-									value={this.state.userId}
 									onChange={this.onChange}
 								/>
 							</div>
