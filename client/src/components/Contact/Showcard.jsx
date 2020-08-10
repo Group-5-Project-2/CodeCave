@@ -1,7 +1,6 @@
 import React from 'react';
-import { Card, Img, Body, Text, Button } from 'react-bootstrap';
-
-
+import { Card, Button } from 'react-bootstrap';
+// import {Img, Body, Text} from 'react-bootstrap';
 export default function Showcard(props) {
     return (
         <div className="col-sm-6 pb-2">

@@ -31,7 +31,7 @@ class Landing extends Component {
       <Nav>
         <Nav.Link>
           <Link to="/profile" className="nav-link">
-            Welcome #User
+            Your Profile
           </Link>
         </Nav.Link>
         <Nav.Link>
@@ -44,11 +44,12 @@ class Landing extends Component {
             Friends
           </Link>
         </Nav.Link>
-        <Nav.Link>
+        {/* Messages is a future feature enhancement */}
+        {/* <Nav.Link>
           <Link to="/messages" className="nav-link">
             Messages
           </Link>
-        </Nav.Link>
+        </Nav.Link> */}
         <Nav.Link>
           <Link to="" onClick={this.logOut.bind(this)} className="nav-link text-danger">
             Logout

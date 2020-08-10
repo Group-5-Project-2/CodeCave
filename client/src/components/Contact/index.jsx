@@ -5,7 +5,7 @@ import Showcard from './Showcard';
 export default function index() {
   return (
 
-    // help links: https://react-bootstrap.github.io/components/carousel/ and https://www.bing.com/videos/search?q=react+bootstrap+4+carousel&&view=detail&mid=4BD6AFF2E7BAF7D71F034BD6AFF2E7BAF7D71F03&rvsmid=51B7383175620746E60751B7383175620746E607&FORM=VDQVAP
+    // helpful CSS links: https://react-bootstrap.github.io/components/carousel/ and https://www.bing.com/videos/search?q=react+bootstrap+4+carousel&&view=detail&mid=4BD6AFF2E7BAF7D71F034BD6AFF2E7BAF7D71F03&rvsmid=51B7383175620746E60751B7383175620746E607&FORM=VDQVAP
 
     <div>
       <div className="container py-5">
@@ -53,7 +53,7 @@ export default function index() {
           <div className="col-12">
             <h3 className="text-center pb-4 text-left">Sharing insight into the CodeCave development process</h3>
 
-            <h6>These University of Texas at Austin Full Stack Bootcamp Coding students designed CodeCave using - React.js, React Bootstrap, Sequelize, Node and Express server, Axios, bcript, JSON Web Token, MySQL database with Sequelize ORM, and deployed with <a href="https://codecave.herokuapp.com/" target="_blank"><strong>Heroku</strong></a>.</h6>
+            <h6>These University of Texas at Austin Full Stack Bootcamp Coding students designed CodeCave using - React.js, React Bootstrap, Sequelize, Node and Express server, Axios, bcript, JSON Web Token, MySQL database with Sequelize ORM, and deployed with <a href="https://codecave.herokuapp.com/" target="_blank" rel="noopener noreferrer"><strong>Heroku</strong></a>.</h6>
             <Carousel>
               <Carousel.Item>
                 <img
