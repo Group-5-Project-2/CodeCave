@@ -1,13 +1,17 @@
+// import express and axios
 const router = require("express").Router();
 const axios = require("axios");
 require("dotenv").config();
 
+// prepare router to use route
 router.get("/search", (req, res) => {
+	// assign queries to variables
 	const queryTitle = req.query.title;
 	const queryLocation = req.query.location;
+	// log queries
 	console.log(`title: ${queryTitle}, location: ${queryLocation}`);
 
-
+	// configuration to get average salary data
 	var config1 = {
 		method: "get",
 		url: `https://indeed-com.p.rapidapi.com/salary/insights?title=${queryTitle}&location=${queryLocation}`,
@@ -17,6 +21,7 @@ router.get("/search", (req, res) => {
 		},
 	};
 
+	// configuration to get job listings data
 	var config2 = {
 		method: "get",
 		url: `https://indeed-com.p.rapidapi.com/search/jobs?query=${queryTitle}&location=${queryLocation}`,
@@ -26,6 +31,7 @@ router.get("/search", (req, res) => {
 		},
 	};
 
+	// send both requests and combine data into a single object
 	return axios.all([axios(config1), axios(config2)]).then(
 		axios.spread((res1, res2) => {
 			const resultsData = []
@@ -38,14 +44,3 @@ router.get("/search", (req, res) => {
 });
 
 module.exports = router;
-
-// https://cors-anywhere.herokuapp.com/
-
-// return axios(config1)
-// 		.then(function (response) {
-// 			const jobData = response.data.averageSalary.toFixed(2)
-// 			resultsData.push(jobData);
-// 		})
-// 		.catch(function (error) {
-// 			console.log(error);
-// 		})
