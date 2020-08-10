@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
 import jwt_decode from "jwt-decode";
+import axios from "axios";
 
 class Profile extends Component {
 	constructor() {
@@ -10,7 +11,7 @@ class Profile extends Component {
 			last_name: "",
 			user_name: "",
 			email: "",
-			jobtitle:"",
+			jobtitle: "",
 			resume: "",
 			portfolio: "",
 			city: "",
@@ -28,6 +29,18 @@ class Profile extends Component {
 			user_name: decoded.user_name,
 			email: decoded.email,
 		});
+		axios.get("/profiles/profiles").then((response) => {
+			console.log(response);
+			if (response.data[0]) {
+				this.setState({
+					job_title: response.data[0].job_title,
+					resume: response.data[0].resume,
+					portfolio: response.data[0].portfolio,
+					city: response.data[0].city,
+					state: response.data[0].state,
+				});
+			}
+		});
 	}
 
 	render() {
@@ -37,7 +50,7 @@ class Profile extends Component {
 					<div className="col-sm-8 mx-auto">
 						<h1 className="text-center">PROFILE</h1>
 					</div>
-					<div className="btn btn-danger">
+					<div className="btn btn-dark">
 						<Link to="/profilePage">Edit Your Profile</Link>
 					</div>
 					<table className="table col-md-6 mx-auto">
