@@ -2,12 +2,8 @@
 
 const Sequelize = require('sequelize')
 const db = require('../database/db.js')
-Object.keys(db).forEach(modelName => {
-    if (db[modelName].associate) {
-        db[modelName].associate(db);
-    }
-});
-const User = db.sequelize.define('user');
+
+const User = require('./user')
 
 const Profile = db.sequelize.define(
     'profile',
