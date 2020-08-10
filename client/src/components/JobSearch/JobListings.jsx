@@ -5,7 +5,7 @@ const JobListings = (props) => {
 	const listings = props.listings.map((j) => (
 		<Job key={j.jobkey} title={j.jobtitle} company={j.company} location={j.formattedLocationFull} url={j.url} relativeTime={j.formattedRelativeTime}></Job>
 	));
-	return <div className="job-listings">{listings}</div>;
+	return <div className="list-container">{listings}</div>;
 };
 
 export default JobListings;
