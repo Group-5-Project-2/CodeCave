@@ -53,6 +53,26 @@ class Profile extends Component {
 								<td>Email</td>
 								<td>{this.state.email}</td>
 							</tr>
+							<tr>
+								<td>Job Title</td>
+								<td>{this.state.job_title}</td>
+							</tr>
+							<tr>
+								<td>Resume</td>
+								<td>{this.state.resume}</td>
+							</tr>
+							<tr>
+								<td>Portfolio</td>
+								<td>{this.state.portfolio}</td>
+							</tr>
+							<tr>
+								<td>City</td>
+								<td>{this.state.city}</td>
+							</tr>
+							<tr>
+								<td>State</td>
+								<td>{this.state.state}</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
