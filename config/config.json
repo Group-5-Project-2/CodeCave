@@ -17,9 +17,9 @@
 		"dialect": "mysql"
 	},
 
-
 	"production": {
 		"use_env_variable": "JAWSDB_URL",
-		"dialect": "mysql"
+		"dialect": "mysql",
+		"API_KEY": "x-rapidapi-key"
 	}
 }
